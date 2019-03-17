@@ -1,0 +1,18 @@
+package media;
+
+public class media {
+	
+	Metadata metadata = ImageMetadataReader.readMetadata(file);
+
+	for (Directory directory : metadata.getDirectories()) {
+	    for (Tag tag : directory.getTags()) {
+	        System.out.format("[%s] - %s = %s",
+	            directory.getName(), tag.getTagName(), tag.getDescription());
+	    }
+	    if (directory.hasErrors()) {
+	        for (String error : directory.getErrors()) {
+	            System.err.format("ERROR: %s", error);
+	        }
+	    }
+	}
+}

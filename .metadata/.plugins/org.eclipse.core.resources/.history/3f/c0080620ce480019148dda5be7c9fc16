@@ -1,0 +1,15 @@
+package media;
+
+public class Tag {
+
+	public Object getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getTagName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
